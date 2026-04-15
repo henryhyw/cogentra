@@ -1,0 +1,113 @@
+services:
+  caddy:
+    image: caddy:2.9.1
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./infra/docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+    depends_on:
+      - web
+      - api
+
+  web:
+    image: node:22-bookworm
+    working_dir: /workspace
+    command: sh -lc "corepack enable && corepack prepare pnpm@10.18.3 --activate && pnpm install && pnpm --filter @oralv/web dev -- --hostname 0.0.0.0 --port 3000"
+    env_file:
+      - .env.docker.example
+    volumes:
+      - .:/workspace
+      - oralv-pnpm-store:/pnpm/store
+    environment:
+      PNPM_HOME: /pnpm
+      PNPM_STORE_PATH: /pnpm/store
+    depends_on:
+      - api
+
+  api:
+    image: python:3.12-slim
+    working_dir: /workspace/apps/api
+    command: sh -lc "apt-get update && apt-get install -y build-essential libpq-dev && pip install uv && uv sync && uv run alembic upgrade head && uv run uvicorn oralv.main:app --host 0.0.0.0 --port 8000 --reload"
+    env_file:
+      - .env.docker.example
+    volumes:
+      - .:/workspace
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      minio:
+        condition: service_started
+
+  worker:
+    image: python:3.12-slim
+    working_dir: /workspace/apps/api
+    command: sh -lc "apt-get update && apt-get install -y build-essential libpq-dev && pip install uv && uv sync && uv run celery -A oralv.worker_app.celery_app worker --loglevel=info -Q ingest,plan,session,evidence,maintenance"
+    env_file:
+      - .env.docker.example
+    volumes:
+      - .:/workspace
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      minio:
+        condition: service_started
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: oralv
+      POSTGRES_PASSWORD: oralv
+      POSTGRES_DB: oralv
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U oralv -d oralv"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7.4-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  minio:
+    image: minio/minio:RELEASE.2025-03-12T18-04-18Z
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+
+  minio-init:
+    image: minio/mc:RELEASE.2025-03-12T17-29-24Z
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      until mc alias set oralv http://minio:9000 minioadmin minioadmin; do sleep 1; done;
+      mc mb --ignore-existing oralv/oralv-local;
+      mc anonymous set private oralv/oralv-local;
+      exit 0;
+      "
+
+volumes:
+  oralv-pnpm-store:
+  postgres-data:
+  redis-data:
+  minio-data:

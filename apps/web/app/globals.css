@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --canvas: #f4efe8;
+  --surface: #f8f5f0;
+  --panel: rgba(255, 250, 244, 0.84);
+  --panel-strong: rgba(251, 246, 239, 0.92);
+  --ink: #15171b;
+  --muted: #69635b;
+  --line: rgba(27, 24, 20, 0.09);
+  --accent: #b16f3d;
+  --accent-strong: #8a542c;
+  --accent-foreground: #fff7ef;
+  --ring: rgba(177, 111, 61, 0.45);
+}
+
+.dark {
+  --canvas: #0e1115;
+  --surface: #13171d;
+  --panel: rgba(20, 24, 31, 0.82);
+  --panel-strong: rgba(24, 29, 37, 0.92);
+  --ink: #f3ede4;
+  --muted: #9e968b;
+  --line: rgba(243, 237, 228, 0.1);
+  --accent: #c58a57;
+  --accent-strong: #d29e70;
+  --accent-foreground: #15110c;
+  --ring: rgba(197, 138, 87, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(186, 125, 72, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(72, 95, 133, 0.12), transparent 28%),
+    var(--canvas);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(177, 111, 61, 0.2);
+}
+
+pre {
+  font-family: var(--font-mono);
+}
