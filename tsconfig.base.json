@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "types": [
+      "node",
+      "react",
+      "react-dom"
+    ],
+    "typeRoots": [
+      "./apps/web/node_modules/@types"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "next": [
+        "apps/web/node_modules/next"
+      ],
+      "next/*": [
+        "apps/web/node_modules/next/*"
+      ],
+      "@concentra/ui/*": [
+        "packages/ui/src/*"
+      ],
+      "@concentra/ui": [
+        "packages/ui/src/index.ts"
+      ],
+      "@concentra/schemas/*": [
+        "packages/schemas/src/*"
+      ],
+      "@concentra/schemas": [
+        "packages/schemas/src/index.ts"
+      ],
+      "@concentra/config/*": [
+        "packages/config/src/*"
+      ],
+      "@concentra/config": [
+        "packages/config/src/index.ts"
+      ]
+    }
+  }
+}
