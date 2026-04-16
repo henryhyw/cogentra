@@ -39,7 +39,9 @@ from app.providers.speech.demo import DemoSpeechProvider
 from app.providers.storage.demo import DemoStorageProvider
 from app.services.demo_repository import DemoRepository
 from app.services.firestore_repository import FirestoreRepository
+from app.services.materialization import StorageMaterializer
 from app.services.parsing import extract_sections
+from app.services.session_rules import build_session_completion_state
 from app.services.text import detect_mime_from_name, extract_student_identifier, slugify
 
 
@@ -260,14 +262,15 @@ class ConcentraService:
         _ = self.resolve_user(token)
         data = self.repository.load()
         assignment = self._require_assignment(data, assignment_id)
-        text = self.storage.read_text(payload.storage_path)
+        material = StorageMaterializer(self.storage).for_path(payload.storage_path)
+        text = material.text
         classification = self.ai.classify_artifact(
             file_name=payload.file_name,
             mime_type=payload.mime_type,
             text_preview=text,
             is_student=False,
         )
-        sections = extract_sections(text or payload.file_name)
+        sections = material.sections or extract_sections(payload.file_name)
         role = classification.role
         artifact = Artifact(
             id=f"artifact_{assignment_id}_{uuid4().hex[:10]}",
@@ -341,9 +344,10 @@ class ConcentraService:
         user = self.resolve_user(token)
         data = self.repository.load()
         assignment = self._require_assignment(data, assignment_id)
+        materializer = StorageMaterializer(self.storage)
         items = []
         for request_item in payload.items:
-            text = self.storage.read_text(request_item.storage_path)
+            text = materializer.for_path(request_item.storage_path).text
             classification = self.ai.classify_artifact(
                 file_name=request_item.file_name,
                 mime_type=request_item.mime_type or detect_mime_from_name(request_item.file_name),
@@ -401,24 +405,28 @@ class ConcentraService:
         data = self.repository.load()
         assignment = self._require_assignment(data, assignment_id)
         import_job = self._require_import(assignment, import_id)
-        assignment_model = Assignment.model_validate({key: value for key, value in assignment.items() if key not in {"artifacts", "imports", "cases"}})
-        pseudo_artifacts = [
-            Artifact(
-                id=item["id"],
-                file_name=item["fileName"],
-                storage_path=item["storagePath"],
-                mime_type=detect_mime_from_name(item["fileName"]),
-                original_size=len(self.storage.read_text(item["storagePath"]).encode("utf-8")),
-                role=item["detectedRole"],
-                detected_role=item["detectedRole"],
-                role_confidence=item["confidence"],
-                extracted_text=self.storage.read_text(item["storagePath"]),
-                extracted_structure=extract_sections(self.storage.read_text(item["storagePath"])),
-                preview_metadata=self._preview_metadata_for(item["detectedRole"], item["fileName"], self.storage.read_text(item["storagePath"]), extract_sections(self.storage.read_text(item["storagePath"]))),
-                created_at=item["createdAt"],
+        assignment_model = self._assignment_model(assignment)
+        materializer = StorageMaterializer(self.storage)
+        pseudo_artifacts = []
+        for item in import_job.get("importedArtifacts", []):
+            material = materializer.for_path(item["storagePath"])
+            sections = material.sections or extract_sections(item["fileName"])
+            pseudo_artifacts.append(
+                Artifact(
+                    id=item["id"],
+                    file_name=item["fileName"],
+                    storage_path=item["storagePath"],
+                    mime_type=detect_mime_from_name(item["fileName"]),
+                    original_size=material.size_bytes,
+                    role=item["detectedRole"],
+                    detected_role=item["detectedRole"],
+                    role_confidence=item["confidence"],
+                    extracted_text=material.text,
+                    extracted_structure=sections,
+                    preview_metadata=self._preview_metadata_for(item["detectedRole"], item["fileName"], material.text, sections),
+                    created_at=item["createdAt"],
+                )
             )
-            for item in import_job.get("importedArtifacts", [])
-        ]
         grouping = self.ai.group_student_bundles(assignment=assignment_model, artifacts=pseudo_artifacts, roster_text=None)
         import_job["detectedBundles"] = [
             ImportBundle(
@@ -482,6 +490,7 @@ class ConcentraService:
         data = self.repository.load()
         assignment = self._require_assignment(data, assignment_id)
         import_job = self._require_import(assignment, import_id)
+        materializer = StorageMaterializer(self.storage)
         grouped: dict[str, list[dict]] = {}
         for item in import_job["importedArtifacts"]:
             if item.get("unresolvedReason"):
@@ -493,8 +502,9 @@ class ConcentraService:
             student_identifier = items[0].get("matchedStudentIdentifier") or items[0].get("detectedStudentIdentifier")
             bundle_artifacts = []
             for item in items:
-                text = self.storage.read_text(item["storagePath"])
-                sections = extract_sections(text)
+                material = materializer.for_path(item["storagePath"])
+                text = material.text
+                sections = material.sections or extract_sections(item["fileName"])
                 bundle_artifacts.append(
                     BundleArtifact(
                         id=f"bundle_artifact_{uuid4().hex[:10]}",
@@ -636,11 +646,14 @@ class ConcentraService:
             "questions": deepcopy(case.get("questions", [])),
             "bundleArtifacts": deepcopy(case.get("bundleArtifacts", [])),
             "responses": deepcopy(case.get("responses", [])),
+            "completion": self._completion_payload(case),
         }
 
     def start_session(self, token_value: str) -> dict:
         data = self.repository.load()
         assignment, case = self._require_case_by_token(data, token_value)
+        if case["session"].get("completedAt"):
+            return deepcopy(case["session"])
         now = now_iso()
         case["session"]["startedAt"] = case["session"].get("startedAt") or now
         case["session"]["status"] = "in_progress"
@@ -666,15 +679,21 @@ class ConcentraService:
     def submit_response(self, token_value: str, question_id: str, audio_path: str, video_path: str | None, duration_seconds: int) -> dict:
         data = self.repository.load()
         assignment, case = self._require_case_by_token(data, token_value)
+        if case["session"].get("completedAt"):
+            raise ValueError("session_already_completed")
         question = next((item for item in case.get("questions", []) if item["id"] == question_id), None)
         if not question:
             raise KeyError("question_not_found")
+        existing_response = next((item for item in case.get("responses", []) if item["questionId"] == question_id), None)
+        if existing_response and not case.get("session", {}).get("allowRerecord", True):
+            raise ValueError("rerecord_not_allowed")
         generated_question = GeneratedQuestion.model_validate(question)
-        case_model = Case.model_validate({key: value for key, value in case.items() if key not in {"bundleArtifacts", "session", "questions", "responses", "result"}})
+        case_model = self._case_model(case)
+        transcription_audio_path = self.storage.speech_uri_for(audio_path) or audio_path
         transcription = self.speech.transcribe(
             case=case_model,
             question=generated_question,
-            audio_path=audio_path,
+            audio_path=transcription_audio_path,
         )
         response = CaseResponse(
             id=f"response_{uuid4().hex[:12]}",
@@ -693,8 +712,8 @@ class ConcentraService:
             ),
             created_at=now_iso(),
         )
-        self.ai.summarize_response(
-            assignment=Assignment.model_validate({key: value for key, value in assignment.items() if key not in {"artifacts", "imports", "cases"}}),
+        response = self.ai.summarize_response(
+            assignment=self._assignment_model(assignment),
             case=case_model,
             question=generated_question,
             response=response,
@@ -713,8 +732,13 @@ class ConcentraService:
     def complete_session(self, token_value: str) -> dict:
         data = self.repository.load()
         assignment, case = self._require_case_by_token(data, token_value)
-        assignment_model = Assignment.model_validate({key: value for key, value in assignment.items() if key not in {"artifacts", "imports", "cases"}})
-        case_model = Case.model_validate({key: value for key, value in case.items() if key not in {"bundleArtifacts", "session", "questions", "responses", "result"}})
+        if case.get("result") and case["session"].get("completedAt"):
+            return deepcopy(case["result"])
+        completion_state = self._completion_state(case)
+        if not completion_state.can_complete:
+            raise ValueError("session_incomplete")
+        assignment_model = self._assignment_model(assignment)
+        case_model = self._case_model(case)
         questions = [GeneratedQuestion.model_validate(item) for item in case.get("questions", [])]
         result = self.ai.synthesize_result(
             assignment=assignment_model,
@@ -751,9 +775,10 @@ class ConcentraService:
         data = self.repository.load()
         assignment, case = self._require_case(data, case_id)
         if not case.get("result") and case.get("responses"):
-            self.complete_session(case["sessionLinkToken"])
-            data = self.repository.load()
-            assignment, case = self._require_case(data, case_id)
+            if self._completion_state(case).can_complete:
+                self.complete_session(case["sessionLinkToken"])
+                data = self.repository.load()
+                assignment, case = self._require_case(data, case_id)
         return {
             "assignment": deepcopy({key: value for key, value in assignment.items() if key not in {"cases", "imports"}}),
             "case": deepcopy(case),
@@ -832,9 +857,21 @@ class ConcentraService:
     def save_uploaded_bytes(self, storage_path: str, content: bytes) -> None:
         self.storage.save_bytes(storage_path=storage_path, content=content)
 
+    def _assignment_model(self, assignment: dict) -> Assignment:
+        return Assignment.model_validate({key: value for key, value in assignment.items() if key not in {"artifacts", "imports", "cases"}})
+
+    def _case_model(self, case: dict) -> Case:
+        return Case.model_validate({key: value for key, value in case.items() if key not in {"bundleArtifacts", "session", "questions", "responses", "result"}})
+
+    def _completion_state(self, case: dict):
+        return build_session_completion_state(case.get("questions", []), case.get("responses", []))
+
+    def _completion_payload(self, case: dict) -> dict:
+        return self._completion_state(case).as_payload()
+
     def _build_case_from_bundle(self, *, assignment: dict, student_identifier: str, student_name: str | None, bundle: list[BundleArtifact]) -> dict:
         now = now_iso()
-        assignment_model = Assignment.model_validate({key: value for key, value in assignment.items() if key not in {"artifacts", "imports", "cases"}})
+        assignment_model = self._assignment_model(assignment)
         case_model = Case(
             id=f"case_{assignment['id']}_{slugify(student_identifier)}",
             assignment_id=assignment["id"],

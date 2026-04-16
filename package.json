@@ -4,9 +4,9 @@
   "private": true,
   "packageManager": "pnpm@10.18.3",
   "scripts": {
-    "dev": "concurrently -n web,api -c blue,magenta \"pnpm dev:web\" \"pnpm dev:api\"",
+    "dev": "concurrently --kill-others-on-fail -n web,api -c blue,magenta \"pnpm dev:web\" \"pnpm dev:api\"",
     "dev:web": "pnpm --dir apps/web dev",
-    "dev:api": "uv run --project apps/api uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "dev:api": "uv run --project apps/api uvicorn app.main:app --app-dir apps/api --host 127.0.0.1 --port 8000 --reload --reload-dir apps/api/app",
     "build": "pnpm --dir apps/web build",
     "lint": "pnpm --dir apps/web lint",
     "test": "pnpm test:api && pnpm test:web",

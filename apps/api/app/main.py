@@ -40,3 +40,8 @@ async def handle_key_error(_, exc: KeyError):
     detail = str(exc).strip("'")
     status = 404 if detail.endswith("_not_found") or detail == "session_not_found" else 400
     return JSONResponse(status_code=status, content={"detail": detail})
+
+
+@app.exception_handler(ValueError)
+async def handle_value_error(_, exc: ValueError):
+    return JSONResponse(status_code=400, content={"detail": str(exc)})

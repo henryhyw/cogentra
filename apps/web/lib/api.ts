@@ -165,16 +165,27 @@ export const api = {
     }),
 };
 
-export async function uploadFile(uploadUrl: string, file: Blob, mimeType: string) {
+export async function uploadFile(
+  uploadUrl: string,
+  file: Blob,
+  mimeType: string,
+  uploadHeaders?: Record<string, string>,
+) {
+  const headers = new Headers(uploadHeaders);
+  if (mimeType) {
+    headers.set("Content-Type", mimeType);
+  }
   const response = await fetch(uploadUrl, {
     method: "PUT",
-    headers: {
-      "Content-Type": mimeType,
-    },
+    headers,
     body: file,
   });
   if (!response.ok) {
     throw new Error("Upload failed");
   }
-  return response.json();
+  const contentType = response.headers.get("content-type") ?? "";
+  if (contentType.includes("application/json")) {
+    return response.json();
+  }
+  return null;
 }

@@ -29,3 +29,7 @@ class StorageProvider(ABC):
     @abstractmethod
     def local_path_for(self, storage_path: str) -> Path | None:
         raise NotImplementedError
+
+    @abstractmethod
+    def speech_uri_for(self, storage_path: str) -> str | None:
+        raise NotImplementedError

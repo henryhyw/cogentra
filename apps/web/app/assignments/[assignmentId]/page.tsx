@@ -92,7 +92,12 @@ export default function AssignmentWorkspacePage() {
           mimeType: file.type || "application/octet-stream",
           contentLength: file.size,
         });
-        await uploadFile(target.uploadUrl, file, file.type || "application/octet-stream");
+        await uploadFile(
+          target.uploadUrl,
+          file,
+          file.type || "application/octet-stream",
+          target.headers,
+        );
         await api.registerArtifact(assignmentId, {
           fileName: file.name,
           storagePath: target.storagePath,
@@ -118,7 +123,12 @@ export default function AssignmentWorkspacePage() {
           mimeType: file.type || "application/octet-stream",
           contentLength: file.size,
         });
-        await uploadFile(target.uploadUrl, file, file.type || "application/octet-stream");
+        await uploadFile(
+          target.uploadUrl,
+          file,
+          file.type || "application/octet-stream",
+          target.headers,
+        );
         registeredItems.push({
           fileName: file.name,
           storagePath: target.storagePath,

@@ -11,6 +11,8 @@ class DemoRepository:
     def __init__(self, settings: Settings):
         self.settings = settings
         self.store_path = settings.demo_runtime_path / "demo_store.json"
+        self._cache: dict | None = None
+        self._cache_mtime_ns: int | None = None
 
     def ensure_seeded(self) -> None:
         if self.store_path.exists():
@@ -18,14 +20,24 @@ class DemoRepository:
         builder = DemoSeedBuilder(self.settings)
         dataset = builder.build()
         builder.write_store(dataset)
+        self._cache = dataset
+        self._cache_mtime_ns = self.store_path.stat().st_mtime_ns
 
     def load(self) -> dict:
         self.ensure_seeded()
-        return json.loads(self.store_path.read_text("utf-8"))
+        mtime_ns = self.store_path.stat().st_mtime_ns
+        if self._cache is not None and self._cache_mtime_ns == mtime_ns:
+            return self._cache
+        data = json.loads(self.store_path.read_text("utf-8"))
+        self._cache = data
+        self._cache_mtime_ns = mtime_ns
+        return data
 
     def save(self, data: dict) -> None:
         self.store_path.parent.mkdir(parents=True, exist_ok=True)
         self.store_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+        self._cache = data
+        self._cache_mtime_ns = self.store_path.stat().st_mtime_ns
 
     def snapshot(self) -> dict:
         return deepcopy(self.load())
@@ -34,6 +46,8 @@ class DemoRepository:
         builder = DemoSeedBuilder(self.settings)
         dataset = builder.build()
         builder.write_store(dataset)
+        self._cache = dataset
+        self._cache_mtime_ns = self.store_path.stat().st_mtime_ns
         return dataset
 
     @staticmethod

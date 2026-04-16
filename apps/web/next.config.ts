@@ -4,10 +4,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   transpilePackages: ["@concentra/ui", "@concentra/schemas", "@concentra/config"],
-  reactCompiler: true,
-  turbopack: {
-    root: path.resolve(__dirname, "../.."),
-  },
+  outputFileTracingRoot: path.resolve(__dirname, "../.."),
   images: {
     remotePatterns: []
   }

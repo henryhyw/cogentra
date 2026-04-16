@@ -38,6 +38,7 @@ export default function StudentSessionPage() {
   const streamRef = useRef<MediaStream | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const startedAtRef = useRef<number | null>(null);
+  const hasStartedSessionRef = useRef(false);
 
   const sessionQuery = useQuery({
     queryKey: ["student-session", sessionToken],
@@ -45,15 +46,30 @@ export default function StudentSessionPage() {
   });
 
   useEffect(() => {
-    if (sessionQuery.data?.responses?.length) {
-      setQuestionIndex(Math.min(sessionQuery.data.responses.length + 1, sessionQuery.data.questions.length));
+    if (!sessionQuery.data?.questions?.length) {
+      return;
+    }
+    const nextMissingQuestionId = sessionQuery.data.completion?.missingQuestionIds?.[0];
+    if (!nextMissingQuestionId) {
+      setQuestionIndex(sessionQuery.data.questions.length);
+      return;
+    }
+    const nextQuestion = sessionQuery.data.questions.findIndex((question: any) => question.id === nextMissingQuestionId);
+    if (nextQuestion >= 0) {
+      setQuestionIndex(nextQuestion + 1);
     }
   }, [sessionQuery.data]);
 
   useEffect(() => {
-    if (!sessionQuery.data) return;
-    api.startSession(sessionToken).catch(() => null);
-  }, [sessionQuery.data, sessionToken]);
+    const session = sessionQuery.data?.session;
+    if (!session || hasStartedSessionRef.current || session.startedAt) return;
+    if (!["not_sent", "sent"].includes(session.status)) return;
+    hasStartedSessionRef.current = true;
+    api.startSession(sessionToken).catch(() => {
+      hasStartedSessionRef.current = false;
+      return null;
+    });
+  }, [sessionQuery.data?.session, sessionToken]);
 
   useEffect(() => {
     return () => {
@@ -65,9 +81,16 @@ export default function StudentSessionPage() {
   }, [previewUrl]);
 
   const currentQuestion = sessionQuery.data?.questions?.[questionIndex - 1];
-  const responseCount = sessionQuery.data?.responses?.length ?? 0;
+  const sessionCompletion = sessionQuery.data?.completion;
+  const responseCount = sessionCompletion?.submittedAnswerCount ?? sessionQuery.data?.responses?.length ?? 0;
   const isVideoMode = sessionQuery.data?.session.mode === "audio_video";
   const canRerecord = sessionQuery.data?.session.allowRerecord ?? true;
+  const hasDraftResponse = recordingState === "recorded" && !!recordedBlob;
+  const hasPendingCapture = recordingState === "recording" || recordingState === "uploading" || hasDraftResponse;
+  const canFinishSession = Boolean(sessionCompletion?.canComplete) && !hasPendingCapture;
+  const completionHint = sessionCompletion?.canComplete
+    ? "ready to finish"
+    : `${sessionCompletion?.missingQuestionIds?.length ?? Math.max((sessionQuery.data?.questions?.length ?? 0) - responseCount, 0)} questions remaining`;
   const submissionSections =
     sessionQuery.data?.bundleArtifacts?.flatMap((artifact: any) =>
       (artifact.extractedStructure ?? []).map((section: any) => ({
@@ -95,7 +118,12 @@ export default function StudentSessionPage() {
         mimeType: recordedBlob.type || (isVideoMode ? "video/webm" : "audio/webm"),
         contentLength: recordedBlob.size,
       });
-      await uploadFile(uploadTarget.uploadUrl, recordedBlob, recordedBlob.type || (isVideoMode ? "video/webm" : "audio/webm"));
+      await uploadFile(
+        uploadTarget.uploadUrl,
+        recordedBlob,
+        recordedBlob.type || (isVideoMode ? "video/webm" : "audio/webm"),
+        uploadTarget.headers,
+      );
       const durationSeconds = startedAtRef.current ? Math.max(1, Math.round((Date.now() - startedAtRef.current) / 1000)) : 60;
       return api.submitResponse(sessionToken, {
         questionId: currentQuestion.id,
@@ -106,18 +134,24 @@ export default function StudentSessionPage() {
     },
     onSuccess: async () => {
       toast.success("Answer submitted");
-      sessionQuery.refetch();
       setRecordedBlob(null);
       if (previewUrl) URL.revokeObjectURL(previewUrl);
       setPreviewUrl(null);
       setRecordingState("idle");
-      if (questionIndex >= (sessionQuery.data?.questions?.length ?? 0)) {
+      const refreshed = await sessionQuery.refetch();
+      if (refreshed.data?.completion?.canComplete) {
         await api.completeSession(sessionToken);
         startTransition(() => {
           router.push(`/session/${sessionToken}/complete`);
         });
       } else {
+        const nextMissingQuestionId = refreshed.data?.completion?.missingQuestionIds?.[0];
+        const nextIndex = refreshed.data?.questions?.findIndex((question: any) => question.id === nextMissingQuestionId) ?? -1;
         startTransition(() => {
+          if (nextIndex >= 0) {
+            setQuestionIndex(nextIndex + 1);
+            return;
+          }
           setQuestionIndex((current) => current + 1);
         });
       }
@@ -128,8 +162,23 @@ export default function StudentSessionPage() {
     },
   });
 
+  const completeMutation = useMutation({
+    mutationFn: () => api.completeSession(sessionToken),
+    onSuccess: () => {
+      startTransition(() => {
+        router.push(`/session/${sessionToken}/complete`);
+      });
+    },
+    onError: (error) => {
+      toast.error(error instanceof Error ? error.message : "Unable to finish session");
+    },
+  });
+
   async function startRecording() {
     try {
+      if (recordingState === "recorded" && !canRerecord) {
+        return;
+      }
       setPermissionError(null);
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: isVideoMode });
       streamRef.current = stream;
@@ -284,7 +333,11 @@ export default function StudentSessionPage() {
                       : "Ready to record"
               }
               primaryLabel={recordingState === "recording" ? "Stop recording" : "Start recording"}
-              canRecord={recordingState !== "uploading"}
+              canRecord={
+                recordingState !== "uploading" &&
+                !completeMutation.isPending &&
+                (recordingState !== "recorded" || canRerecord)
+              }
               onPrimary={recordingState === "recording" ? stopRecording : startRecording}
             />
 
@@ -314,11 +367,11 @@ export default function StudentSessionPage() {
         </div>
 
         <PersistentControlBar
-          status={`${responseCount} of ${sessionQuery.data.questions.length} responses submitted · ${recordingState} · ${isVideoMode ? "audio + video mode" : "audio-only mode"}`}
+          status={`${responseCount} of ${sessionCompletion?.requiredAnswerCount ?? sessionQuery.data.questions.length} required responses submitted · ${completionHint} · ${recordingState} · ${isVideoMode ? "audio + video mode" : "audio-only mode"}`}
         >
           <Button
             variant="secondary"
-            disabled={!recordedBlob || recordingState === "uploading" || !canRerecord}
+            disabled={!recordedBlob || recordingState === "uploading" || !canRerecord || completeMutation.isPending}
             onClick={() => {
               setRecordedBlob(null);
               if (previewUrl) URL.revokeObjectURL(previewUrl);
@@ -329,7 +382,7 @@ export default function StudentSessionPage() {
             Re-record
           </Button>
           <Button
-            disabled={!recordedBlob || recordingState === "uploading"}
+            disabled={!recordedBlob || recordingState === "uploading" || completeMutation.isPending}
             loading={submitMutation.isPending}
             onClick={() => submitMutation.mutate()}
           >
@@ -338,24 +391,23 @@ export default function StudentSessionPage() {
           </Button>
           <Button
             variant="ghost"
-            disabled={questionIndex >= sessionQuery.data.questions.length}
+            disabled={questionIndex >= sessionQuery.data.questions.length || hasPendingCapture || completeMutation.isPending}
             onClick={() => startTransition(() => setQuestionIndex((current) => Math.min(current + 1, sessionQuery.data.questions.length)))}
           >
             Next question
           </Button>
           <Button
             variant="ghost"
-            disabled={questionIndex <= 1}
+            disabled={questionIndex <= 1 || hasPendingCapture || completeMutation.isPending}
             onClick={() => startTransition(() => setQuestionIndex((current) => Math.max(current - 1, 1)))}
           >
             Previous
           </Button>
           <Button
             variant="secondary"
-            onClick={async () => {
-              await api.completeSession(sessionToken);
-              router.push(`/session/${sessionToken}/complete`);
-            }}
+            disabled={!canFinishSession || completeMutation.isPending}
+            loading={completeMutation.isPending}
+            onClick={() => completeMutation.mutate()}
           >
             <StopCircle className="size-4" />
             Finish session

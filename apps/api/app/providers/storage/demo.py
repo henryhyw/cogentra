@@ -43,3 +43,6 @@ class DemoStorageProvider(StorageProvider):
     def local_path_for(self, storage_path: str) -> Path | None:
         path = self.root / storage_path
         return path if path.exists() else path
+
+    def speech_uri_for(self, storage_path: str) -> str | None:
+        return storage_path

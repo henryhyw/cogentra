@@ -5,8 +5,8 @@
       "email": "demo@concentra.app",
       "displayName": "Alex Mercer",
       "role": "reviewer",
-      "createdAt": "2026-04-16T13:06:23Z",
-      "updatedAt": "2026-04-16T13:06:23Z",
+      "createdAt": "2026-04-16T15:30:51Z",
+      "updatedAt": "2026-04-16T15:30:51Z",
       "preferences": {
         "theme": "dark",
         "defaultSessionPreferences": {
@@ -27,8 +27,8 @@
       "description": "",
       "status": "ready",
       "createdBy": "user_demo_reviewer",
-      "createdAt": "2026-04-16T13:06:23Z",
-      "updatedAt": "2026-04-16T13:06:23Z",
+      "createdAt": "2026-04-16T15:30:51Z",
+      "updatedAt": "2026-04-16T15:30:51Z",
       "sessionDefaults": {
         "questionCount": 6,
         "answerDurationSeconds": 120,
@@ -307,7 +307,7 @@
               "Deliverable"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         },
         {
@@ -347,7 +347,7 @@
               "Criteria"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         },
         {
@@ -379,14 +379,14 @@
               "Teacher Note"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         }
       ],
       "imports": [
         {
           "id": "import_assignment_sustainability_report",
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "createdBy": "user_demo_reviewer",
           "status": "completed",
           "sourceType": "mixed",
@@ -412,7 +412,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24103",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_sustainability_report_s24111-daniel-ortiz-impact-report-md",
@@ -424,7 +424,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24111",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_sustainability_report_s24128-priya-menon-impact-report-md",
@@ -436,7 +436,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24128",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_sustainability_report_s24132-liam-walker-impact-report-md",
@@ -448,7 +448,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24132",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_sustainability_report_s24144-sofia-alvarez-impact-report-md",
@@ -460,7 +460,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24144",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "detectedBundles": [
@@ -957,8 +957,8 @@
               "confidence": 0.94
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_sustainability_report_s24103-maya-chen-impact-report-md",
@@ -1015,7 +1015,7 @@
                   "Evidence Interpretation"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -1026,8 +1026,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -1294,7 +1294,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24103_2",
@@ -1312,7 +1312,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24103_3",
@@ -1330,7 +1330,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24103_4",
@@ -1348,7 +1348,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24103_5",
@@ -1366,7 +1366,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24103_6",
@@ -1384,7 +1384,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -1769,7 +1769,7 @@
               }
             ],
             "finalReviewerNote": "Consistent oral defense. Final review completed with no additional follow-up required.",
-            "reviewedAt": "2026-04-16T13:06:23Z",
+            "reviewedAt": "2026-04-16T15:30:51Z",
             "reviewedBy": "user_demo_reviewer"
           }
         },
@@ -2212,8 +2212,8 @@
               "confidence": 0.74
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_sustainability_report_s24111-daniel-ortiz-impact-report-md",
@@ -2270,7 +2270,7 @@
                   "Evidence Interpretation"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -2281,8 +2281,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -2549,7 +2549,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24111_2",
@@ -2567,7 +2567,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24111_3",
@@ -2585,7 +2585,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24111_4",
@@ -2603,7 +2603,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24111_5",
@@ -2621,7 +2621,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24111_6",
@@ -2639,7 +2639,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -3474,8 +3474,8 @@
               "confidence": 0.84
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_sustainability_report_s24128-priya-menon-impact-report-md",
@@ -3532,7 +3532,7 @@
                   "Evidence Interpretation"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -3543,8 +3543,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -3811,7 +3811,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24128_2",
@@ -3829,7 +3829,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24128_3",
@@ -3847,7 +3847,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24128_4",
@@ -3865,7 +3865,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24128_5",
@@ -3883,7 +3883,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24128_6",
@@ -3901,7 +3901,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -4729,8 +4729,8 @@
               "confidence": 0.74
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_sustainability_report_s24132-liam-walker-impact-report-md",
@@ -4787,7 +4787,7 @@
                   "Evidence Interpretation"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -4798,8 +4798,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -5066,7 +5066,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24132_2",
@@ -5084,7 +5084,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24132_3",
@@ -5102,7 +5102,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24132_4",
@@ -5120,7 +5120,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24132_5",
@@ -5138,7 +5138,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24132_6",
@@ -5156,7 +5156,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -5984,8 +5984,8 @@
               "confidence": 0.94
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_sustainability_report_s24144-sofia-alvarez-impact-report-md",
@@ -6042,7 +6042,7 @@
                   "Evidence Interpretation"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -6053,8 +6053,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -6321,7 +6321,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24144_2",
@@ -6339,7 +6339,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24144_3",
@@ -6357,7 +6357,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24144_4",
@@ -6375,7 +6375,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24144_5",
@@ -6393,7 +6393,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_sustainability_report_s24144_6",
@@ -6411,7 +6411,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -6796,7 +6796,7 @@
               }
             ],
             "finalReviewerNote": "Consistent oral defense. Final review completed with no additional follow-up required.",
-            "reviewedAt": "2026-04-16T13:06:23Z",
+            "reviewedAt": "2026-04-16T15:30:51Z",
             "reviewedBy": "user_demo_reviewer"
           }
         }
@@ -6809,8 +6809,8 @@
       "description": "",
       "status": "ready",
       "createdBy": "user_demo_reviewer",
-      "createdAt": "2026-04-16T13:06:23Z",
-      "updatedAt": "2026-04-16T13:06:23Z",
+      "createdAt": "2026-04-16T15:30:51Z",
+      "updatedAt": "2026-04-16T15:30:51Z",
       "sessionDefaults": {
         "questionCount": 6,
         "answerDurationSeconds": 120,
@@ -7074,7 +7074,7 @@
               "Deliverable"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         },
         {
@@ -7106,7 +7106,7 @@
               "Rubric"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         },
         {
@@ -7138,14 +7138,14 @@
               "Slide Instructions"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         }
       ],
       "imports": [
         {
           "id": "import_assignment_strategy_deck",
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "createdBy": "user_demo_reviewer",
           "status": "completed",
           "sourceType": "mixed",
@@ -7171,7 +7171,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24201",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24201-noah-kim-speaker-notes-md",
@@ -7183,7 +7183,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24201",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24208-aisha-rahman-strategy-deck-md",
@@ -7195,7 +7195,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24208",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24208-aisha-rahman-speaker-notes-md",
@@ -7207,7 +7207,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24208",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24217-ben-carter-strategy-deck-md",
@@ -7219,7 +7219,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24217",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24217-ben-carter-speaker-notes-md",
@@ -7231,7 +7231,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24217",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24226-grace-liu-strategy-deck-md",
@@ -7243,7 +7243,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24226",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24226-grace-liu-speaker-notes-md",
@@ -7255,7 +7255,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24226",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24233-mateo-rivera-strategy-deck-md",
@@ -7267,7 +7267,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24233",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_strategy_deck_s24233-mateo-rivera-speaker-notes-md",
@@ -7279,7 +7279,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24233",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "detectedBundles": [
@@ -7776,8 +7776,8 @@
               "confidence": 0.94
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24201-noah-kim-strategy-deck-md",
@@ -7834,7 +7834,7 @@
                   "Slide 3 \u2014 Strategic Case"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24201-noah-kim-speaker-notes-md",
@@ -7869,7 +7869,7 @@
                   "Delivery Intent"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -7880,8 +7880,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -8148,7 +8148,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24201_2",
@@ -8166,7 +8166,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24201_3",
@@ -8184,7 +8184,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24201_4",
@@ -8202,7 +8202,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24201_5",
@@ -8220,7 +8220,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24201_6",
@@ -8238,7 +8238,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -8623,7 +8623,7 @@
               }
             ],
             "finalReviewerNote": "Consistent oral defense. Final review completed with no additional follow-up required.",
-            "reviewedAt": "2026-04-16T13:06:23Z",
+            "reviewedAt": "2026-04-16T15:30:51Z",
             "reviewedBy": "user_demo_reviewer"
           }
         },
@@ -9066,8 +9066,8 @@
               "confidence": 0.74
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24208-aisha-rahman-strategy-deck-md",
@@ -9124,7 +9124,7 @@
                   "Slide 3 \u2014 Strategic Case"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24208-aisha-rahman-speaker-notes-md",
@@ -9159,7 +9159,7 @@
                   "Delivery Intent"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -9170,8 +9170,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -9438,7 +9438,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24208_2",
@@ -9456,7 +9456,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24208_3",
@@ -9474,7 +9474,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24208_4",
@@ -9492,7 +9492,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24208_5",
@@ -9510,7 +9510,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24208_6",
@@ -9528,7 +9528,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -10363,8 +10363,8 @@
               "confidence": 0.84
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24217-ben-carter-strategy-deck-md",
@@ -10421,7 +10421,7 @@
                   "Slide 3 \u2014 Strategic Case"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24217-ben-carter-speaker-notes-md",
@@ -10456,7 +10456,7 @@
                   "Delivery Intent"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -10467,8 +10467,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -10735,7 +10735,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24217_2",
@@ -10753,7 +10753,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24217_3",
@@ -10771,7 +10771,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24217_4",
@@ -10789,7 +10789,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24217_5",
@@ -10807,7 +10807,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24217_6",
@@ -10825,7 +10825,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -11653,8 +11653,8 @@
               "confidence": 0.74
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24226-grace-liu-strategy-deck-md",
@@ -11711,7 +11711,7 @@
                   "Slide 3 \u2014 Strategic Case"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24226-grace-liu-speaker-notes-md",
@@ -11746,7 +11746,7 @@
                   "Delivery Intent"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -11757,8 +11757,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -12025,7 +12025,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24226_2",
@@ -12043,7 +12043,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24226_3",
@@ -12061,7 +12061,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24226_4",
@@ -12079,7 +12079,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24226_5",
@@ -12097,7 +12097,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24226_6",
@@ -12115,7 +12115,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -12943,8 +12943,8 @@
               "confidence": 0.94
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24233-mateo-rivera-strategy-deck-md",
@@ -13001,7 +13001,7 @@
                   "Slide 3 \u2014 Strategic Case"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_strategy_deck_s24233-mateo-rivera-speaker-notes-md",
@@ -13036,7 +13036,7 @@
                   "Delivery Intent"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -13047,8 +13047,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -13315,7 +13315,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24233_2",
@@ -13333,7 +13333,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24233_3",
@@ -13351,7 +13351,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24233_4",
@@ -13369,7 +13369,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24233_5",
@@ -13387,7 +13387,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_strategy_deck_s24233_6",
@@ -13405,7 +13405,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -13790,7 +13790,7 @@
               }
             ],
             "finalReviewerNote": "Consistent oral defense. Final review completed with no additional follow-up required.",
-            "reviewedAt": "2026-04-16T13:06:23Z",
+            "reviewedAt": "2026-04-16T15:30:51Z",
             "reviewedBy": "user_demo_reviewer"
           }
         }
@@ -13803,8 +13803,8 @@
       "description": "",
       "status": "ready",
       "createdBy": "user_demo_reviewer",
-      "createdAt": "2026-04-16T13:06:23Z",
-      "updatedAt": "2026-04-16T13:06:23Z",
+      "createdAt": "2026-04-16T15:30:51Z",
+      "updatedAt": "2026-04-16T15:30:51Z",
       "sessionDefaults": {
         "questionCount": 6,
         "answerDurationSeconds": 120,
@@ -14068,7 +14068,7 @@
               "Deliverable"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         },
         {
@@ -14100,7 +14100,7 @@
               "Rubric"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         },
         {
@@ -14132,14 +14132,14 @@
               "Teacher Guidance"
             ]
           },
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "explainability": null
         }
       ],
       "imports": [
         {
           "id": "import_assignment_mobility_notebook",
-          "createdAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
           "createdBy": "user_demo_reviewer",
           "status": "completed",
           "sourceType": "mixed",
@@ -14165,7 +14165,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24302",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24302-harper-singh-writeup-md",
@@ -14177,7 +14177,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24302",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24309-jonas-park-analysis-notebook-md",
@@ -14189,7 +14189,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24309",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24309-jonas-park-writeup-md",
@@ -14201,7 +14201,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24309",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24314-elena-rossi-analysis-notebook-md",
@@ -14213,7 +14213,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24314",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24314-elena-rossi-writeup-md",
@@ -14225,7 +14225,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24314",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24321-owen-brooks-analysis-notebook-md",
@@ -14237,7 +14237,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24321",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24321-owen-brooks-writeup-md",
@@ -14249,7 +14249,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24321",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24337-leila-hassan-analysis-notebook-md",
@@ -14261,7 +14261,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24337",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "import_item_bundle_artifact_assignment_mobility_notebook_s24337-leila-hassan-writeup-md",
@@ -14273,7 +14273,7 @@
               "confidence": 0.93,
               "bundleId": "bundle_s24337",
               "unresolvedReason": null,
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "detectedBundles": [
@@ -14770,8 +14770,8 @@
               "confidence": 0.94
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24302-harper-singh-analysis-notebook-md",
@@ -14828,7 +14828,7 @@
                   "Analytical Reasoning"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24302-harper-singh-writeup-md",
@@ -14863,7 +14863,7 @@
                   "Commentary"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -14874,8 +14874,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -15142,7 +15142,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24302_2",
@@ -15160,7 +15160,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24302_3",
@@ -15178,7 +15178,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24302_4",
@@ -15196,7 +15196,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24302_5",
@@ -15214,7 +15214,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24302_6",
@@ -15232,7 +15232,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -15617,7 +15617,7 @@
               }
             ],
             "finalReviewerNote": "Consistent oral defense. Final review completed with no additional follow-up required.",
-            "reviewedAt": "2026-04-16T13:06:23Z",
+            "reviewedAt": "2026-04-16T15:30:51Z",
             "reviewedBy": "user_demo_reviewer"
           }
         },
@@ -16060,8 +16060,8 @@
               "confidence": 0.74
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24309-jonas-park-analysis-notebook-md",
@@ -16118,7 +16118,7 @@
                   "Analytical Reasoning"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24309-jonas-park-writeup-md",
@@ -16153,7 +16153,7 @@
                   "Commentary"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -16164,8 +16164,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -16432,7 +16432,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24309_2",
@@ -16450,7 +16450,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24309_3",
@@ -16468,7 +16468,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24309_4",
@@ -16486,7 +16486,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24309_5",
@@ -16504,7 +16504,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24309_6",
@@ -16522,7 +16522,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -17357,8 +17357,8 @@
               "confidence": 0.84
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24314-elena-rossi-analysis-notebook-md",
@@ -17415,7 +17415,7 @@
                   "Analytical Reasoning"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24314-elena-rossi-writeup-md",
@@ -17450,7 +17450,7 @@
                   "Commentary"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -17461,8 +17461,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -17729,7 +17729,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24314_2",
@@ -17747,7 +17747,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24314_3",
@@ -17765,7 +17765,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24314_4",
@@ -17783,7 +17783,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24314_5",
@@ -17801,7 +17801,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24314_6",
@@ -17819,7 +17819,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -18647,8 +18647,8 @@
               "confidence": 0.74
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24321-owen-brooks-analysis-notebook-md",
@@ -18705,7 +18705,7 @@
                   "Analytical Reasoning"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24321-owen-brooks-writeup-md",
@@ -18740,7 +18740,7 @@
                   "Commentary"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -18751,8 +18751,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -19019,7 +19019,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24321_2",
@@ -19037,7 +19037,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24321_3",
@@ -19055,7 +19055,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24321_4",
@@ -19073,7 +19073,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24321_5",
@@ -19091,7 +19091,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24321_6",
@@ -19109,7 +19109,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -19937,8 +19937,8 @@
               "confidence": 0.94
             }
           ],
-          "createdAt": "2026-04-16T13:06:23Z",
-          "updatedAt": "2026-04-16T13:06:23Z",
+          "createdAt": "2026-04-16T15:30:51Z",
+          "updatedAt": "2026-04-16T15:30:51Z",
           "bundleArtifacts": [
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24337-leila-hassan-analysis-notebook-md",
@@ -19995,7 +19995,7 @@
                   "Analytical Reasoning"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "bundle_artifact_assignment_mobility_notebook_s24337-leila-hassan-writeup-md",
@@ -20030,7 +20030,7 @@
                   "Commentary"
                 ]
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "session": {
@@ -20041,8 +20041,8 @@
             "answerDurationSeconds": 120,
             "allowRerecord": true,
             "status": "summary_ready",
-            "startedAt": "2026-04-16T13:06:23Z",
-            "completedAt": "2026-04-16T13:06:23Z"
+            "startedAt": "2026-04-16T15:30:51Z",
+            "completedAt": "2026-04-16T15:30:51Z"
           },
           "questions": [
             {
@@ -20309,7 +20309,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24337_2",
@@ -20327,7 +20327,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24337_3",
@@ -20345,7 +20345,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24337_4",
@@ -20363,7 +20363,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24337_5",
@@ -20381,7 +20381,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             },
             {
               "id": "response_q_case_assignment_mobility_notebook_s24337_6",
@@ -20399,7 +20399,7 @@
                 "confidence": 0.0,
                 "explainability": null
               },
-              "createdAt": "2026-04-16T13:06:23Z"
+              "createdAt": "2026-04-16T15:30:51Z"
             }
           ],
           "result": {
@@ -20784,7 +20784,7 @@
               }
             ],
             "finalReviewerNote": "Consistent oral defense. Final review completed with no additional follow-up required.",
-            "reviewedAt": "2026-04-16T13:06:23Z",
+            "reviewedAt": "2026-04-16T15:30:51Z",
             "reviewedBy": "user_demo_reviewer"
           }
         }
@@ -20800,7 +20800,7 @@
       "detail": "5 student cases were generated from the latest import.",
       "assignmentId": "assignment_sustainability_report",
       "caseId": null,
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     },
     {
       "id": "activity_case_case_assignment_sustainability_report_s24103",
@@ -20809,7 +20809,7 @@
       "detail": "4 focus points generated \u00b7 0 flagged areas \u00b7 summary ready",
       "assignmentId": "assignment_sustainability_report",
       "caseId": "case_assignment_sustainability_report_s24103",
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     },
     {
       "id": "activity_case_case_assignment_sustainability_report_s24111",
@@ -20818,7 +20818,7 @@
       "detail": "4 focus points generated \u00b7 1 flagged areas \u00b7 summary ready",
       "assignmentId": "assignment_sustainability_report",
       "caseId": "case_assignment_sustainability_report_s24111",
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     },
     {
       "id": "activity_import_assignment_strategy_deck",
@@ -20827,7 +20827,7 @@
       "detail": "5 student cases were generated from the latest import.",
       "assignmentId": "assignment_strategy_deck",
       "caseId": null,
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     },
     {
       "id": "activity_case_case_assignment_strategy_deck_s24201",
@@ -20836,7 +20836,7 @@
       "detail": "4 focus points generated \u00b7 0 flagged areas \u00b7 summary ready",
       "assignmentId": "assignment_strategy_deck",
       "caseId": "case_assignment_strategy_deck_s24201",
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     },
     {
       "id": "activity_case_case_assignment_strategy_deck_s24208",
@@ -20845,7 +20845,7 @@
       "detail": "4 focus points generated \u00b7 1 flagged areas \u00b7 summary ready",
       "assignmentId": "assignment_strategy_deck",
       "caseId": "case_assignment_strategy_deck_s24208",
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     },
     {
       "id": "activity_import_assignment_mobility_notebook",
@@ -20854,7 +20854,7 @@
       "detail": "5 student cases were generated from the latest import.",
       "assignmentId": "assignment_mobility_notebook",
       "caseId": null,
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     },
     {
       "id": "activity_case_case_assignment_mobility_notebook_s24302",
@@ -20863,7 +20863,7 @@
       "detail": "4 focus points generated \u00b7 0 flagged areas \u00b7 summary ready",
       "assignmentId": "assignment_mobility_notebook",
       "caseId": "case_assignment_mobility_notebook_s24302",
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     },
     {
       "id": "activity_case_case_assignment_mobility_notebook_s24309",
@@ -20872,7 +20872,7 @@
       "detail": "4 focus points generated \u00b7 1 flagged areas \u00b7 summary ready",
       "assignmentId": "assignment_mobility_notebook",
       "caseId": "case_assignment_mobility_notebook_s24309",
-      "createdAt": "2026-04-16T13:06:23Z"
+      "createdAt": "2026-04-16T15:30:51Z"
     }
   ]
 }
