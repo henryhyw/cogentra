@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-paper text-ink font-sans text-14 antialiased;
+    font-feature-settings: "cv11","ss01","ss03";
+  }
+  ::selection { background: #FFF2CC; color: #0B0B0A; }
+  h1, h2, h3, h4 { letter-spacing: -0.01em; }
+  .display { @apply font-serif font-normal tracking-tight; }
+  .num { font-variant-numeric: tabular-nums; }
+  .mono { @apply font-mono; }
+  button { -webkit-tap-highlight-color: transparent; }
+  /* subtle scrollbar */
+  * { scrollbar-width: thin; scrollbar-color: #D9D6CE transparent; }
+  *::-webkit-scrollbar { width: 10px; height: 10px; }
+  *::-webkit-scrollbar-thumb { background: #D9D6CE; border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
+}
